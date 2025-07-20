@@ -7,22 +7,12 @@
 package serverwofacade;
 public class ServerWOFacade {
     public static void main(String[] args) {
-	ServerControlFacade serverControl = getServerControlFacade();
-	// scheduleServer.startBooting();
-	// scheduleServer.readSystemConfigFile();
-	// scheduleServer.init();
-	// scheduleServer.initializeContext();
-	// scheduleServer.initializeListeners();
-	// scheduleServer.createSystemObjects();
+	ServerControlFacade serverControl = ServerControlFacade.getServerControlFacade();
+	
 	serverControl.startWorking();
 	System.out.println("Start working......");
+
 	System.out.println("After work done.........");
-	// scheduleServer.releaseProcesses();
-	// scheduleServer.destory();
-	// scheduleServer.destroySystemObjects();
-	// scheduleServer.destoryListeners();
-	// scheduleServer.destoryContext();
-	// scheduleServer.shutdown();
 	serverControl.stopWorking();
     }
     
